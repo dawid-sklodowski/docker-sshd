@@ -1,6 +1,6 @@
 # Building
 #
-# This Dockerfile builds ubuntu image with sshd running.
+# This Dockerfile builds ubuntu image with sshd.
 # It requires at least one public key to be present in public-keys directory.
 # Usually you can find you public keys in $HOME/.ssh/*.pub
 # So you can copy them with command:
