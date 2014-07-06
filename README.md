@@ -3,6 +3,9 @@ docker-sshd
 
 Quickest way to spin off server instance with sshd on your local machine
 
+Probably it isn't the best idea to build images for your production services starting with plain sshd server [as disuessed here](http://jpetazzo.github.io/2014/06/23/docker-ssh-considered-evil/). 
+
+However for development purposes it is very useful to be able to spin off a new server with sshd access in seconds. It gives you plain vanilla ubuntu server, similar to what you would get from Amazon EC2, if using ubuntu image.
 
 ---
 
