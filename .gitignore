@@ -1,2 +1,3 @@
 public-keys/*
 !public-keys/.gitkeep
+!public-keys/example.pub
