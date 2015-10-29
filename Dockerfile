@@ -19,7 +19,7 @@ RUN mkdir /home/ubuntu/.ssh
 COPY public-keys /home/ubuntu/public-keys
 
 # Check if there are any keys in public-keys. Exit with message if there are none.
-RUN test -e /home/ubuntu/public-keys/* || (echo "\n\n No keys present in public-keys.\n Please copy your public key to public-keys.\n\n" && exit 1)
+RUN test $(ls /home/ubuntu/public-keys/* | wc -l) -gt 0 || (echo "\n\n No keys present in public-keys.\n Please copy your public key to public-keys.\n\n" && exit 1)
 
 RUN cat /home/ubuntu/public-keys/* > /home/ubuntu/.ssh/authorized_keys
 RUN rm -rf /home/ubuntu/public-keys
@@ -29,4 +29,3 @@ RUN chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 EXPOSE 22
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
-
