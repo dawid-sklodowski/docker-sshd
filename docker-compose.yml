@@ -2,5 +2,3 @@ ssh1:
   build: .
   ports:
    - 22
-  volumes:
-   - .:/code
